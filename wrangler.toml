@@ -1,4 +1,4 @@
-name = "LibreTV" # 与你的项目名保持一致
+name = "libretv" # 与你的项目名保持一致
 compatibility_date = "2026-11-03" # 使用当前日期
 
 [assets]
