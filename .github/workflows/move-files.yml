@@ -1,0 +1,14 @@
+name: Move static files to public
+on: [push]
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p public
+          # 使用 find 命令排除 functions 和 public 本身，移动其余所有项
+          find . -maxdepth 1 ! -name '.' ! -name 'functions' ! -name 'public' ! -name '.git' -exec mv {} public/ \;
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-move static files to public"
