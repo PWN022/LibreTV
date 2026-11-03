@@ -1,0 +1,6 @@
+name = "LibreTV" # 与你的项目名保持一致
+compatibility_date = "2026-11-03" # 使用当前日期
+
+[assets]
+directory = "./public" # 指向你的静态资源目录
+binding = "ASSETS" # 声明 ASSETS 绑定
